@@ -18,7 +18,7 @@ namespace DataAccess
         #endregion
 
         #region Constructor
-        //private static Logger() { }
+        static Logger() { }
         
 
         #endregion
