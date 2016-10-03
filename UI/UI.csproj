@@ -96,6 +96,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{07291181-6863-43a9-908f-54c2ebe4f0b8}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{753772f3-10b7-402a-8010-2b82721c9635}</Project>
       <Name>Entities</Name>
