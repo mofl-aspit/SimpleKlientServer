@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F7E98B2-11E2-4A31-B968-1DEAC4FD521A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{07291181-6863-43A9-908F-54C2EBE4F0B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Services</RootNamespace>
-    <AssemblyName>Services</AssemblyName>
+    <RootNamespace>Client.Controllers</RootNamespace>
+    <AssemblyName>Client.Controllers</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,18 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.csproj">
+    <ProjectReference Include="..\CCC.Entities\CCC.Entities.csproj">
       <Project>{753772f3-10b7-402a-8010-2b82721c9635}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Networking\Networking.csproj">
+    <ProjectReference Include="..\CCC.Networking\CCC.Networking.csproj">
       <Project>{8c752ad3-8f45-4aa1-b757-3b50c50e71c6}</Project>
       <Name>Networking</Name>
     </ProjectReference>

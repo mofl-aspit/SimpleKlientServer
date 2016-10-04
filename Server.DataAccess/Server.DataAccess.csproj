@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{07291181-6863-43A9-908F-54C2EBE4F0B8}</ProjectGuid>
+    <ProjectGuid>{195237B9-3D6F-43D0-9692-0B0B62DFDDE5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Controllers</RootNamespace>
-    <AssemblyName>Controllers</AssemblyName>
+    <RootNamespace>Server.DataAccess</RootNamespace>
+    <AssemblyName>Server.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,17 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.csproj">
+    <ProjectReference Include="..\CCC.Entities\CCC.Entities.csproj">
       <Project>{753772f3-10b7-402a-8010-2b82721c9635}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Networking\Networking.csproj">
-      <Project>{8c752ad3-8f45-4aa1-b757-3b50c50e71c6}</Project>
-      <Name>Networking</Name>
+      <Name>CCC.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

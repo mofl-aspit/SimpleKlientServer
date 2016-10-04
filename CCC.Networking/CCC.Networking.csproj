@@ -7,8 +7,8 @@
     <ProjectGuid>{8C752AD3-8F45-4AA1-B757-3B50C50E71C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Networking</RootNamespace>
-    <AssemblyName>Networking</AssemblyName>
+    <RootNamespace>CCC.Networking</RootNamespace>
+    <AssemblyName>CCC.Networking</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.csproj">
+    <ProjectReference Include="..\CCC.Entities\CCC.Entities.csproj">
       <Project>{753772f3-10b7-402a-8010-2b82721c9635}</Project>
-      <Name>Entities</Name>
+      <Name>CCC.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

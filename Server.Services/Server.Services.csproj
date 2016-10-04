@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{195237B9-3D6F-43D0-9692-0B0B62DFDDE5}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{0F7E98B2-11E2-4A31-B968-1DEAC4FD521A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccess</RootNamespace>
-    <AssemblyName>DataAccess</AssemblyName>
+    <RootNamespace>Server.Services</RootNamespace>
+    <AssemblyName>Server.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,13 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logger.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.csproj">
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Server.DataAccess\Server.DataAccess.csproj">
+      <Project>{195237b9-3d6f-43d0-9692-0b0b62dfdde5}</Project>
+      <Name>Server.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CCC.Entities\CCC.Entities.csproj">
       <Project>{753772f3-10b7-402a-8010-2b82721c9635}</Project>
-      <Name>Entities</Name>
+      <Name>CCC.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CCC.Networking\CCC.Networking.csproj">
+      <Project>{8c752ad3-8f45-4aa1-b757-3b50c50e71c6}</Project>
+      <Name>CCC.Networking</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

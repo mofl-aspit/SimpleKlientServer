@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+    <ProjectReference Include="..\Server.DataAccess\Server.DataAccess.csproj">
       <Project>{195237b9-3d6f-43d0-9692-0b0b62dfdde5}</Project>
-      <Name>DataAccess</Name>
+      <Name>Server.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
