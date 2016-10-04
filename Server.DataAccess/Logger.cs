@@ -18,13 +18,14 @@
 
         #region Fields
         private static readonly string path;
+        private static string TextDotTxt = @"\Text.txt";
         #endregion
 
         #region Constructor
         static Logger()
         {
             //finds the file path and binds it to the "path"
-            path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + TextDotTxt;
         }
         #endregion
         
