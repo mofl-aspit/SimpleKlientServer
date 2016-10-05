@@ -8,23 +8,23 @@
     using System.Threading.Tasks;
     using System.IO;
     using System.Reflection;
-
     using CCC.Entities;
     #endregion
 
     public static class Logger
     {
         #region Constants
+        //specifies which txt file is needed
         private const string TextDotTxt = @"\DateTest.txt";
-        private const string DateFormat = "yyyy/MM/dd";
+        //specifies the format for the date time, remember to reinsert .HH:mm.ss on the ending
+        private const string DateFormat = "yyyy.MM.dd";
+        //avoids hardcoding for spaces in text file
         private const string Space = " ";
         #endregion
 
         #region Fields
         // readonly path to the destination folder
         private static readonly string path;
-        //the file that is referred too
-        
         #endregion
 
         #region Constructor
@@ -50,7 +50,8 @@
             // if yes then it overwrites it, if no then it creates a new one
             StreamWriter file = new StreamWriter(path, append: true);
             //writes a line equal to string message
-            file.WriteLine(DateTime.Today.ToString(DateFormat) + Space + message);
+            
+            file.WriteLine($"{DateTime.Now.ToString(DateFormat)}" + Space + message);
             //closes the file for safety and stuff
             file.Close();
 
