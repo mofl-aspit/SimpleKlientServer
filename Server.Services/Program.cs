@@ -13,7 +13,7 @@ namespace Server.Services
     {
         static void Main(string[] args)
         {
-            Logger.Log("Test log message");
+            Logger.Log("Test log message 2");
 
 
         }

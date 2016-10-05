@@ -11,11 +11,12 @@ namespace DataAccesTest
         public void TestMethod1()
         {
             //Arrange
-
+            string message = "test log message";
+            
             //Act
-
+            Logger.Log(message);
             //Assert
-
+            
         }
     }
 }
