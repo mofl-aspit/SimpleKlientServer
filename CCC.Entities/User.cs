@@ -21,7 +21,11 @@ namespace CCC.Entities
         #endregion
 
         #region Constructor
-
+        public User(string username, string password)
+        {
+            Username = username;
+            Password = password;
+        }
         #endregion
 
         #region Properties
