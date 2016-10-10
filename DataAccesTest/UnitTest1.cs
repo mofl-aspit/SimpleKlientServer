@@ -1,9 +1,12 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Server.DataAccess;
-
-namespace DataAccesTest
+﻿namespace DataAccesTest
 {
+    #region Usings
+    using System;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Server.DataAccess;
+    #endregion
+
+
     [TestClass]
     public class UnitTest1
     {

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-
-namespace CCC.Entities
+﻿namespace CCC.Entities
 {
+    #region Usings
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Text.RegularExpressions;
+    using System.Threading.Tasks;
+    #endregion
+
     public class User
     {
         #region Constants
@@ -14,13 +16,24 @@ namespace CCC.Entities
         #endregion
 
         #region Fields
+        /// <summary>
+        /// Field for holding the Username(string)
+        /// </summary>
         private string username;
+        /// <summary>
+        /// Field for holding the Password(string)
+        /// </summary>
         private string password;
 
 
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// the Constructor for User
+        /// </summary>
+        /// <param name="username">string</param>
+        /// <param name="password">string</param>
         public User(string username, string password)
         {
             Username = username;
@@ -29,6 +42,9 @@ namespace CCC.Entities
         #endregion
 
         #region Properties
+        /// <summary>
+        /// Usernames Property with some validation and exception handling
+        /// </summary>
         public string Username
         {
             get
@@ -52,6 +68,9 @@ namespace CCC.Entities
             }
         }
 
+        /// <summary>
+        /// Password Property with some validation and exception handling
+        /// </summary>
         public string Password
         {
             get

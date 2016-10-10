@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CCC.Entities
+﻿namespace CCC.Entities
 {
+    #region Usings
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    #endregion
+
     class Message
     {
         #region Constants
@@ -13,11 +15,18 @@ namespace CCC.Entities
         #endregion
 
         #region Fields
+        /// <summary>
+        /// Field for holding the text of the message
+        /// </summary>
         private string messageText;
+        /// <summary>
+        /// Field for holding the reciever of the message
+        /// </summary>
         private string messageReceiver;
+        /// <summary>
+        /// Field for holding the sender of the message
+        /// </summary>
         private string messageSender;
-
-
         #endregion
 
         #region Constructor
@@ -36,6 +45,10 @@ namespace CCC.Entities
         #endregion
 
         #region Properties
+        /// <summary>
+        /// Property for the message text
+        /// holds no validation to allow all kinds of text
+        /// </summary>
         public string MessageText
         {
             get
@@ -49,6 +62,9 @@ namespace CCC.Entities
             }
         }
 
+        /// <summary>
+        /// Property for the message reciever
+        /// </summary>
         public string MessageReceiver
         {
             get
@@ -58,10 +74,29 @@ namespace CCC.Entities
 
             set
             {
-                messageReceiver = value;
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException;
+                }
+                if(value.Length > 10)
+                {
+                    throw new ArgumentException("The name is too long");
+                }
+                if(value.Length < 2)
+                {
+                    throw new ArgumentException("The name is too short");
+                }
+                else
+                {
+                    messageReceiver = value;
+                }
+                
             }
         }
 
+        /// <summary>
+        /// Property for message sender
+        /// </summary>
         public string MessageSender
         {
             get
@@ -71,7 +106,23 @@ namespace CCC.Entities
 
             set
             {
-                messageSender = value;
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException;
+                }
+                if (value.Length > 10)
+                {
+                    throw new ArgumentException("The name is too long");
+                }
+                if (value.Length < 2)
+                {
+                    throw new ArgumentException("The name is too short");
+                }
+                else
+                {
+                    messageSender = value;
+                }
+                
             }
         }
         #endregion
