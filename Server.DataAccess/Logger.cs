@@ -1,5 +1,6 @@
 ﻿namespace Server.DataAccess
 {
+    //Usings
     #region Usings
     using System;
     using System.Collections.Generic;
@@ -26,7 +27,7 @@
         // readonly path to the destination folder
         private static readonly string path;
         #endregion
-
+        
         #region Constructor
         /// <summary>
         /// a static constructor for initializing the readonly path
