@@ -46,11 +46,11 @@
   <ItemGroup>
     <ProjectReference Include="..\CCC.Entities\CCC.Entities.csproj">
       <Project>{753772f3-10b7-402a-8010-2b82721c9635}</Project>
-      <Name>Entities</Name>
+      <Name>CCC.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\CCC.Networking\CCC.Networking.csproj">
       <Project>{8c752ad3-8f45-4aa1-b757-3b50c50e71c6}</Project>
-      <Name>Networking</Name>
+      <Name>CCC.Networking</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
