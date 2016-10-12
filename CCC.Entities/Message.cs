@@ -76,7 +76,7 @@
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException;
+                    throw new ArgumentException();
                 }
                 if(value.Length > 10)
                 {
@@ -108,7 +108,7 @@
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException;
+                    throw new ArgumentException();
                 }
                 if (value.Length > 10)
                 {
