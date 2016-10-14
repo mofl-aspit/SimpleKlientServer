@@ -1,6 +1,5 @@
 ﻿namespace Server.DataAccess
 {
-    
     #region Usings
     using System;
     using System.Collections.Generic;

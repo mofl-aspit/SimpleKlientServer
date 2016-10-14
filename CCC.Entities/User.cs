@@ -24,8 +24,6 @@
         /// Field for holding the Password(string)
         /// </summary>
         private string password;
-
-
         #endregion
 
         #region Constructor

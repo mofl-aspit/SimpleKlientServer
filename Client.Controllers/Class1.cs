@@ -1,6 +1,4 @@
-﻿
-
-namespace Client.Controllers
+﻿namespace Client.Controllers
 {
     #region Usings
     using System;
