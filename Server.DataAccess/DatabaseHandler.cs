@@ -8,6 +8,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using CCC.Entities;
     #endregion
     class DatabaseHandler
     {
@@ -90,8 +91,45 @@
                 throw ex;
             } 
         }
+        
+        protected string DbReturnString(string strSql)
+        {
+            string strRes = "";
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(strSql, this.Sqlcon))
+                {
+                    OpenDBCon();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        strRes = reader.GetValue(0).ToString();
+                    }
+                    CloseDBCon();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            return strRes;
+        }
 
 
+        public bool UsernameConfirmation(string username)
+        {
+            bool res = false;
+            try
+            {
+                string Username = DbReturnString("SELECT * FROM UserTable WHERE Username = " + username + "");
+                res = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return res;
+        }
         #endregion
     }
 }
