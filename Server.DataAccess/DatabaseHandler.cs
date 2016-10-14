@@ -22,7 +22,20 @@
         #endregion
 
         #region Constructor
+        public DatabaseHandler()
+        {
+            connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ChatDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            try
+            {
+                OpenDBCon();
+                CloseDBCon();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
+        }
         #endregion
 
         #region Properties
@@ -77,6 +90,8 @@
                 throw ex;
             } 
         }
+
+
         #endregion
     }
 }
