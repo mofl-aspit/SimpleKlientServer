@@ -114,8 +114,7 @@
             }
             return strRes;
         }
-
-
+        
         public bool UsernameConfirmation(string username)
         {
             bool res = false;
@@ -130,6 +129,23 @@
             }
             return res;
         }
+
+        public bool CompleteConfirmation(string username, string password)
+        {
+            bool res = false;
+            try
+            {
+                string Password = DbReturnString("SELECT * FROM UserTable WHERE Username = " + username + " AND Password = " + password + "");
+                res = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return res;
+        }
+        
         #endregion
     }
 }
