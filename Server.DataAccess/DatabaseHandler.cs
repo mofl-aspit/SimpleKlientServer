@@ -17,7 +17,7 @@
 
         #region Fields
         private string connectionString;
-        private SqlConnection con;
+        private SqlConnection Sqlcon;
         private SqlCommand command;
         #endregion
 
@@ -33,19 +33,19 @@
         /// <summary>
         /// A method for closing a database connection
         /// </summary>
-        public void CloseDB()
+        public void CloseDBCon()
         {
             try
             {
                 //checks if there is a connection, and then closes it
-                if (this.con != null)
+                if (this.Sqlcon != null)
                 {
-                    this.con.Close();
+                    this.Sqlcon.Close();
                 }
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
-                throw new ArgumentException();
+                throw ex;
             }
             
         }
@@ -53,22 +53,22 @@
         /// <summary>
         /// A method for opening the connection to the database
         /// </summary>
-        protected void OpenDB()
+        protected void OpenDBCon()
         {
             try
             {
                 //checks if there is a connection and if its closed
                 //and then opens it
-                if (con != null && con.State == ConnectionState.Closed)
+                if (Sqlcon.State == ConnectionState.Closed)
                 {
-                    con.Open();
+                    Sqlcon.Open();
                 }
                 //incase something of the above doesn't seem to work
                 //make sure the connection is closed and then open it
                 else
                 {
-                    CloseDB();
-                    OpenDB();
+                    CloseDBCon();
+                    OpenDBCon();
                 }
             }
             //catches with an sql exception
